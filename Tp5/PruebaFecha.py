@@ -41,7 +41,17 @@ def casesDeaths(data, desde, hasta):
         # if cases:   
         #  print(cases)
 
-
+'''
+if ((case > 50 )and(case < 100 )):
+        Estado = "Medio"
+        print(Estado ) 
+    if (case > 100):
+        Estado = "Alto"
+        print(Estado)
+    if (case < 50):
+        Estado = "Bajo"
+        print(Estado) 
+'''
 
 #URL= 'https://api.covid19api.com/country/argentina/status/deaths?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z'
 #api_link = "https://api.covid19api.com/live/country/south-africa/status/confirmed"
