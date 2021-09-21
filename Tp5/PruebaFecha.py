@@ -1,11 +1,17 @@
 #from datetime import datetime
+from typing import *
 import requests
 import numpy as np
 import pandas as pd
-from tabulate import tabulate 
+from tabulate import tabulate
+
 
 listaFecha = []
 lista = ['argentina','brazil','chile','colombia','ecuador','guyana','paraguay','peru','suriname','uruguay','venezuela','trinidad and tobago']
+lista1 = ['------------']
+lista2 = ['------------']
+lista3 = ['--------']
+
 def ciclo():
     
     for f in range(0,2):
@@ -17,41 +23,42 @@ def ciclo():
         dia = input()
         fecha = anio+"-"+mes+"-"+dia
         listaFecha.append(fecha)
-    print(listaFecha[0] + " /// " + listaFecha[1])
+    print(listaFecha[0] + " /// " + listaFecha[1]) 
+    cabezera = pd.DataFrame([[lista1,lista2,lista3]], columns=[' Pais  ', '  Muertos', '   Estado'])
+    print(cabezera)
 
-    for x in lista:
-        casesDeaths(x,listaFecha[0],listaFecha[1])
+    for data in lista:
+        api_link = f'https://api.covid19api.com/country/{data}/status/deaths?from={listaFecha[0]}T00:00:00Z&to={listaFecha[1]}T00:00:00Z'
+        #print (api_link)
+        response = requests.get(api_link)
+        respuesta = response.json()
+        for item in respuesta:      
+            case = item.get("Cases")
+            #casesDeaths(x,listaFecha[0],listaFecha[1])
+        if ((case > 50 )and(case < 100 )):
+            Estado = "Medio" 
+        if (case > 100):
+            Estado = "Alto"
+        if (case < 50):
+            Estado = "Bajo"
+   
+        df = pd.DataFrame([[data,case, Estado]], columns=['        ', '           ','           '])
+        print(df)
+    
 
 
-def casesDeaths(data, desde, hasta):
-    api_link = f'https://api.covid19api.com/country/{data}/status/deaths?from={desde}T00:00:00Z&to={hasta}T00:00:00Z'
-    #print (api_link)
-    response = requests.get(api_link)
-    respuesta = response.json()
-    for item in respuesta:      
-        case = item.get("Cases")
-    #print(case)
-        print(tabulate(lista, headers=['Pais', 'Muertos'], showindex=True))
-
-
-
-#    df = pd.DataFrame([[data,case]], columns=['    Pais    ', '     Muertos'])
-#    print(df)
-
+#def casesDeaths(data, desde, hasta):
+    #print(case) 
+  
+    
+    
+    
+    #df = pd.DataFrame([[data,case]], columns=['        ', '           ', '           '])
+    #print(df)
+    
         # if cases:   
         #  print(cases)
 
-'''
-if ((case > 50 )and(case < 100 )):
-        Estado = "Medio"
-        print(Estado ) 
-    if (case > 100):
-        Estado = "Alto"
-        print(Estado)
-    if (case < 50):
-        Estado = "Bajo"
-        print(Estado) 
-'''
 
 #URL= 'https://api.covid19api.com/country/argentina/status/deaths?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z'
 #api_link = "https://api.covid19api.com/live/country/south-africa/status/confirmed"
