@@ -6,25 +6,32 @@ import pandas as pd
 from tabulate import tabulate
 
 
+
 listaFecha = []
 lista = ['argentina','brazil','chile','colombia','ecuador','guyana','paraguay','peru','suriname','uruguay','venezuela','trinidad and tobago']
-lista1 = ['------------']
-lista2 = ['------------']
+lista1 = ['--------']
+lista2 = ['-----------']
 lista3 = ['--------']
 
 def ciclo():
-    
+
     for f in range(0,2):
         print("Ingrese el año:")
-        anio = input()
+        anio = int(input())
+        if ((anio < 2020 )and (anio > 2021)):
+            break
         print("Ingrese el mes:")
-        mes = input()
+        mes = int(input())
+        if ((mes < 0 )and (mes > 12)):
+            break
         print("Ingrese el dia:")
-        dia = input()
-        fecha = anio+"-"+mes+"-"+dia
+        dia = int(input())
+        if ((dia < 0)and (dia > 31)):
+            break
+        fecha = str(anio)+"-"+str(mes)+"-"+str(dia)
         listaFecha.append(fecha)
     print(listaFecha[0] + " /// " + listaFecha[1]) 
-    cabezera = pd.DataFrame([[lista1,lista2,lista3]], columns=[' Pais  ', '  Muertos', '   Estado'])
+    cabezera = pd.DataFrame([[lista1,lista2,lista3]], columns=['Pais', 'Muertos', 'Estado'])
     print(cabezera)
 
     for data in lista:
