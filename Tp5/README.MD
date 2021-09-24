@@ -14,6 +14,7 @@ pandas
 ## Instalación:
 
 pip install request
+
 pip install pandas
 
 Se adjunta en el repositorio un archivo Requirements.txt donde se muestra todas las librerias necesarias para la resolucion del trabajo practico.
