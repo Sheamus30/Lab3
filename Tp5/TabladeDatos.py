@@ -44,11 +44,11 @@ def run():
             case = item.get("Cases")
             sigla = item.get("CountryCode")
         if ((case > 15000 )and(case < 50000 )):
-            Estado = "Medio" 
+            Estado = "Amarillo" 
         if (case > 50000):
-            Estado = "Alto"
+            Estado = "Rojo"
         if (case < 15000):
-            Estado = "Bajo"
+            Estado = "Verde"
    
         df = pd.DataFrame([[sigla,case, Estado]], columns=['        ', '           ','           '])
         print(df)
