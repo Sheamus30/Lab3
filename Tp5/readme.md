@@ -21,6 +21,8 @@ Se adjunta en el repositorio un archivo Requirements.txt donde se muestra todas 
 
 ## Ejecución:
 
+Para ejecutar el sistema abrir una consola sobre la ubicación y ejecutar el siguiente comando:
+
 python3 main.py
 
 
