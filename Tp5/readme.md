@@ -19,6 +19,11 @@ pip install pandas
 
 Se adjunta en el repositorio un archivo Requirements.txt donde se muestra todas las librerias necesarias para la resolucion del trabajo practico.
 
+## Ejecución:
+
+python3 main.py
+
+
 ## Webgrafía
 
 Documentacion COVID-19:	https://documenter.getpostman.com/view/10808728/SzS8rjbc
