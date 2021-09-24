@@ -4,7 +4,7 @@ La aplicación me debe permitir consultar por rango de fechas (tengo que poder i
 Resolucion:
 Nuestro programa muestra la cantidad de muertos en el rango de fechas que se ingrese y queda como dato para el usuario y el crea un semáforo para la cantidad de muertos en total a la fecha actual. 
 
-Librerias Utilizadas:
-requests
-pandas
+Librerias utilizadas:
+requests,
+pandas.
 Se adjunta en el repositorio un archivo Requirements.txt donde se muestra todas las librerias necesarias para la resolucion del trabajo practico.
