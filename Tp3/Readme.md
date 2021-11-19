@@ -29,7 +29,7 @@ Se crea un documento a partir de la clase DocTemplate y se le pasa una lista de 
 
 - ReportLab: https://www.reportlab.com/dev/opensource/
 
-- Recursos Python: https://recursospython.com/guias-y-manuales/crear-documentos-pdf-en-python-con-reportlab/
+- PLATYPUS : http://elviajedelnavegante.blogspot.com/2010/04/crear-documentos-pdf-en-python-y-3.html
 
 - Guia completa de ReportLab: https://www.reportlab.com/docs/reportlab-userguide.pdf
 
