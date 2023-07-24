@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      
+    <link href="../css/styles.css" rel="stylesheet" />
+    <title>Mejores peliculas</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:5500/assets/favicon/favicon.png">
+
+    <link rel="manifest" href="./assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="http://127.0.0.1:5500/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+
+
+</head>
+<body>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="topRated.html">Mejores peliculas</a>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"  href="../View/index.html">Peliculas</a>
+                </li>
+              </ul>
+              <form id="form" class="d-flex" role="search">
+                  <input id="search" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-info" type="submit">Buscar</button>
+              </form>
+            </div>
+        </div>
+    </nav>
+
+      <div id="tags"></div>
+
+
+      <main id="main"></main>
+  
+      <div class="pagination">
+          <div class="page" id="prev">Anterior</div>
+          <div class="current" id="current">1</div>
+          <div class="page" id="next">Siguiente</div>
+  
+      </div>
+  
+      <script src="../Controlador/scriptTR.js"></script>
+  </body>
+  </html>
